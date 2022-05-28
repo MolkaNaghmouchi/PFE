@@ -86,6 +86,7 @@ import { ListformationComponent } from './matiere/listformation/listformation.co
 import { Listenseignanttomponent } from './eleves/listeleve copy/listeleve.component';
 import { ListformattionComponent } from './eleves/listeleve copy 2/listeleve.component';
 import { HomeComponent } from './home/home.component';
+import { CompComponent } from './comp/comp.component';
 const MATERIAL_MODULES = [MatToolbarModule,
   MatIconModule
 ];
@@ -174,7 +175,8 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     ListformationComponent ,
     Listenseignanttomponent ,
     ListformattionComponent,
-    HomeComponent ,
+    HomeComponent,
+    CompComponent ,
     ],
   providers: [
     {
