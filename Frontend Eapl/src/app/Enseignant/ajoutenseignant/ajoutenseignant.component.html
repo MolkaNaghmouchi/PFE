@@ -1,0 +1,195 @@
+<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+    </div> 
+    <a href="#!" class="btn btn-success mt-2">modifier le profile</a>
+  </div>
+</div> 
+
+    
+<div class="container-fluid mt--7">
+  <div class="row">
+    <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 order-lg-2">
+           
+            
+        
+        </div>
+        
+       
+          <div class="row">
+            <div class="col">
+              <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                <div>
+                  
+              
+                <div>
+                  
+                </div>
+                <div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <h3>
+             
+            </h3>
+            <div class="h5 font-weight-300">
+            
+            </div>
+            <div class="h5 mt-4">
+            
+            </div>
+            <div>
+              
+            </div>
+            <hr class="my-4" />
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8 order-xl-1">
+      <div class="card bg-secondary shadow">
+        <div class="card-header bg-white border-0">
+          <div class="row align-items-center">
+            <div class="col-8">
+              <div  style="display: flex; justify-content: space-between;margin: 30px 20px;">
+              <h2>Ajout des Enseignants</h2>
+              <button class="btn btn-success mt-2" routerLink="/Enseignant">Liste</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+<div class="container">
+ 
+
+    
+  
+  <div class="tab-pane active"  id="settings">
+
+
+
+        <h5 class="mb-4 text-uppercase"><i class="mdi mdi-account-circle me-1"></i> Info personelle</h5>
+
+        <div class="row">
+
+
+            <div class="col-md-6">
+
+                <div class="mb-3">
+                    <label for="validationDefault02" class="form-label">Nom</label>
+                    <input type="text" [(ngModel)]="user.firstName"  class="form-control"  placeholder="Enter your name">
+
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label  class="form-label">Prenom</label>
+                    <input type="text" [(ngModel)]="user.lastName"  class="form-control"  placeholder="Enter last name">
+                </div>
+            </div> <!-- end col -->
+            <div class="col-md-6">
+              <div class="mb-3">
+                  <label class="form-label">Nom utilisateur</label>
+                  <input type="text"   [(ngModel)]="user.userName"     class="form-control"  placeholder="Enter HF">
+              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+                <label  class="form-label">date de début</label>
+                <input type="datetime-local" [(ngModel)]="user.starterDate"   class="form-control"  placeholder="Entrer L'adresse">
+            </div>
+        </div>
+        </div> <!-- end row -->
+        <div class="row">
+          <div class="col-md-6">
+              <div class="mb-3">
+                  <label for="useremail" class="form-label">Email </label>
+                  <input type="email" [(ngModel)]="user.email" class="form-control"  placeholder="Enter email">
+
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="mb-3">
+                  <label for="userpassword" class="form-label">Password</label>
+                  <input type="password" [(ngModel)]="user.password" class="form-control" id="userpassword" placeholder="Enter password">
+
+              </div>
+          </div> <!-- end col -->
+      </div> <!-- end row -->
+
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="age" [(ngModel)]="user.age" class="form-control"  placeholder="Enter email">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="userpassword" class="form-label">Adresse</label>
+                    <input type="texte" [(ngModel)]="user.adresse" class="form-control" id="userpassword" placeholder="Enter password">
+
+                </div>
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+
+       <div class="row">
+          <div class="col-md-6">
+              <div class="mb-3">
+                  <label class="form-label">Image</label>
+                  <input type="file" class="form-control" >
+
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="mb-3">
+                  <label  class="form-label">niveau</label>
+                  <input type="text" class="form-control" [(ngModel)]="user.niveau" placeholder="Enter specialite">
+
+              </div>
+          </div> <!-- end col -->
+      </div> <!-- end row -->
+      <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label  class="form-label">Num</label>
+                <input type="tel"  class="form-control" [(ngModel)]="user.num" placeholder="Enter TEL">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label  class="form-label">ROLE</label>
+                <input type="text" class="form-control" [(ngModel)]="user.role" placeholder="Enter ROLE">
+
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
+
+
+       
+
+      
+
+        <div class="row">
+
+        </div> <!-- end row -->
+
+
+        <div class="text-end">
+            <button type="submit" (click)="addEnseignant()" class="btn btn-success mt-2"  ><i class="mdi mdi-content-save"></i> Ajouter</button>
+        </div>
+
+
+</div>
+
+  </div>

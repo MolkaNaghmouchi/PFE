@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<style>
+
+    table.table td a.edit {
+        color: #FFC107;
+    }
+    table.table td a.delete {
+        color: #E34724;
+    }
+    table.table td i {
+        font-size: 19px;
+    }
+	table.table td a.add i {
+        font-size: 24px;
+    	margin-right: -1px;
+        position: relative;
+        top: 3px;
+    }
+    table.table .form-control {
+        height: 32px;
+        line-height: 32px;
+        box-shadow: none;
+        border-radius: 2px;
+    }
+	table.table .form-control.error {
+		border-color: #f50000;
+	}
+	table.table td .add {
+		display: none;
+	}
+</style>
+</head>
+
+
+
+<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+      <div class="header-body">
+
+
+</div>
+</div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+<!-- Table -->
+<div class="row">
+<div class="col">
+  <div class="card shadow">
+    <div class="card-header border-0">
+      <h3 class="mb-0">List des matieres                  <div class="col-sm-4">
+
+          <br>
+        <button type="button" routerLink="/ajoutmatiere" class="badge rounded-pill bg-primary"><i class="fa fa-plus" ></i> ajouter un matiere</button>
+
+    </div></h3>
+    </div>
+    <div class="table-responsive">
+  <div class="row mt-3">
+
+  <div *ngFor="let f of formation" class="col-md-3 col-sm-6">
+      <div class="film-item" [title]="f.intituleFormation" >
+          <div class="card" >
+               <img src="" class="w-100"  style="width: 100%;height: 200px;">
+               <div class="movie-title">{{f.intituleFormation}}</div>
+
+               <div class="card-body" [ngClass]="bg-gradient-orange">
+               <h5 class="card-title">{{ f.typeFormation + '  '+ f.prix }}</h5>
+
+               <button  class="btn btn-success "  routerLink="['/Detailsformation' , f.Id ]">voir details >></button>
+
+
+              <button class="btn btn-danger " (click)="delete(f.Id)"  >supprimer</button>
+
+
+          </div>
+
+      </div>
+
+  </div>
+  </div>

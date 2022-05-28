@@ -1,0 +1,174 @@
+
+<div class="header bg-gradient-orange py-7 py-lg-8">
+  <div class="container">
+    <div class="header-body text-center mb-7">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-6">
+          <h1 class="text-white">Bienvenue Chez Elios Academy</h1>
+          <p class="text-lead text-light">Vous n'avez pâs de compte ! Inscrivez-vous Maintenant </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="separator separator-bottom separator-skew zindex-100">
+    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container mt--8 pb-5">
+  <!-- Table -->
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <div class="card bg-secondary shadow border-0">
+        
+        <div class="card-body px-lg-5 py-lg-5">
+          <div class="text-center text-muted mb-4">
+            <small>Ou inscrivez-vous avec vos identifiants</small>
+          </div>
+          <form class="pt-3" [formGroup]="formDemo">
+            <div class="form-group">
+              <label>Nom d'utilisateur</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-account-outline text-primary"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control form-control-lg border-left-0" placeholder="Username"  formControlName="Username"  id="username" required>
+              </div>
+              <div *ngIf="isSubmit&&form.username.errors" class="p1">
+                <p style="color:red;" *ngIf="form.username.errors.required">Veuillez entrer le nom d'utilisateur.</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-email-outline text-primary"></i>
+                  </span>
+                </div>
+                <input type="email" class="form-control form-control-lg border-left-0" placeholder="Email" formControlName="email" id="email" required >
+              </div>
+              <div *ngIf="isSubmit&&form.email.errors" class="p1">
+                <p *ngIf="form.email.errors.required">Veuillez saisir un e-mail</p>
+                <p style="color:red;" *ngIf="form.email.errors.email">Veuillez saisir une adresse e-mail valide.</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Prenom</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-account-outline text-primary"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control form-control-lg border-left-0" placeholder="FirstName" formControlName="firstName" id="firstName" required>
+              </div>
+              <div *ngIf="isSubmit&&form.firstName.errors" class="p1">
+                <p style="color:red;"*ngIf="form.firstName.errors.required">Veuillez saisir le prénom.</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Nom </label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-account-outline text-primary"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control form-control-lg border-left-0" placeholder="LastName"  formControlName="lastName" required >
+              </div>
+              <div *ngIf="isSubmit&&form.lastName.errors" class="p1">
+                <p style="color:red;" *ngIf="form.lastName.errors.required">Veuillez saisir le nom de famille.</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Telephone</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-tablet-android text-primary"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control form-control-lg border-left-0" placeholder="telephone" formControlName="Num" required>
+              </div>
+              <div *ngIf="isSubmit&&form.Num.errors" class="p1">
+                <p style="color:red;" *ngIf="form.Num.errors.required">Veuillez saisir le telephone</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Adresse</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi  mdi-home text-primary"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control form-control-lg border-left-0" placeholder="Adress"  formControlName="adresse" required>
+              </div>
+              <div *ngIf="isSubmit&&form.adresse.errors" class="p1">
+                <p style="color:red;" *ngIf="form.adresse.errors.required">Veuillez saisir l'adresse.</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Age</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-account-outline text-primary"></i>
+                  </span>
+                </div>
+                <input type="
+                number" class="form-control form-control-lg border-left-0" placeholder="Age"  formControlName="age"  id="age" required>
+              </div>
+              <div *ngIf="isSubmit&&form.age.errors" class="p1">
+                <p style="color:red;" *ngIf="form.age.errors.required">Veuillez entrer l'age.</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Lequel es-tu !!</label>
+              <select class="form-control form-control-lg" id="exampleFormControlSelect2" (change)="selectChangeHandler($event)">
+                <option>Select </option>
+                <option>Eleve</option>
+                <option>Enseignant</option>
+
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Mot de passe</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-lock-outline text-primary"></i>
+                  </span>
+                </div>
+                <input type="password" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Password" formControlName="password" required>
+              </div>
+              <div *ngIf="isSubmit&&form.password.errors" class="p1">
+                <p style="color:red;" *ngIf="form.password.errors.required" >   
+                  Veuillez entrer le mot de passe.</p>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="form-check">
+                <label class="form-check-label text-muted">
+                  <input type="checkbox" class="form-check-input">
+                  J'accepte tous les termes et conditions
+                </label>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary" (click)="onSubmit()"  >inscrire</button>
+            <div class="text-center mt-4 font-weight-light">
+              Already have an account? <a href="/login" class="text-primary">Login</a>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,155 @@
+<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+    </div>
+    <a href="#!" class="btn btn-success mt-2">modifier le profile</a>
+  </div>
+</div>
+
+
+<div class="container-fluid mt--7">
+  <div class="row">
+    <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 order-lg-2">
+
+
+
+        </div>
+
+
+          <div class="row">
+            <div class="col">
+              <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                <div>
+
+
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <h3>
+
+            </h3>
+            <div class="h5 font-weight-300">
+
+            </div>
+            <div class="h5 mt-4">
+
+            </div>
+            <div>
+
+            </div>
+            <hr class="my-4" />
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8 order-xl-1">
+      <div class="card bg-secondary shadow">
+        <div class="card-header bg-white border-0">
+          <div class="row align-items-center">
+            <div class="col-8">
+              <div  style="display: flex; justify-content: space-between;margin: 30px 20px;">
+              <h2>Ajout des paiement</h2>
+              <button class="btn btn-success mt-2" routerLink="/tables">Liste</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+<div class="container">
+
+
+
+
+  <div class="tab-pane active"  id="settings">
+
+
+
+        <h5 class="mb-4 text-uppercase"><i class="mdi mdi-account-circle me-1"></i> Paiement</h5>
+
+
+
+
+
+
+
+        <!--div class="mb-3">
+          <label for="example-select" class="form-label">Eleve</label>
+          <select [(ngModel)]="paiement.id"lass="form-control " id="example-select">
+
+            <option *ngFor="let u of user" [value]="u.id">{{u.username}} </option>
+          </select>
+        </!--div>-->
+        <div class="mb-3">
+          <label for="example-select" class="form-label">Eleve</label>
+          <select [(ngModel)]="paiement.id" class="form-control " id="example-select">
+
+            <option *ngFor="let u of user" [value]="u.id">{{u.firstName}} </option>
+          </select>
+        </div>
+
+
+
+
+               <div class="col-md-6">
+            <div class="mb-3">
+                <label  class="form-label">Mois</label>
+                <input type="texte" [(ngModel)]="paiement.Mois" class="form-control"  placeholder="Entrer mois">
+            </div>
+           </div>
+         </div> <!-- end row -->
+
+             <div class="col-md-6">
+              <div class="mb-3">
+                  <label  class="form-label">date paiement </label>
+                  <input type="date" [(ngModel)]="paiement.date_paiement" class="form-control"  placeholder="Entrer date">
+
+              </div>
+
+          </div>
+
+          <!--div class="col-md-6">
+            <div class="mb-3">
+              <div class="form-check form-switch">
+                <input class="form-check-input"  type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                 <label class="form-check-label" for="flexSwitchCheckChecked">reglé</label> <br>
+                 <label class="form-check-label" for="flexSwitchCheckChecked">non-reglé</label>
+            </div>-->
+
+        </div>
+
+
+
+          <div class="col-md-6">
+              <div class="mb-3">
+                  <label class="form-label">Montant</label>
+                  <input type="number" [(ngModel)]="paiement.Mois" class="form-control"  placeholder="Enter montant">
+
+              </div>
+          </div> <!-- end col -->
+
+
+
+
+        <div class="row">
+
+        </div> <!-- end row -->
+
+
+        <div class="text-end">
+            <button type="submit" (click)="ajout()" class="btn btn-success mt-2"  ><i class="mdi mdi-content-save"></i> Ajouter</button>
+        </div>
+
+
+</div>
+
+  </div>
+

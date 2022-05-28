@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<style>
+
+    table.table td a.edit {
+        color: #FFC107;
+    }
+    table.table td a.delete {
+        color: #E34724;
+    }
+    table.table td i {
+        font-size: 19px;
+    }
+	table.table td a.add i {
+        font-size: 24px;
+    	margin-right: -1px;
+        position: relative;
+        top: 3px;
+    }
+    table.table .form-control {
+        height: 32px;
+        line-height: 32px;
+        box-shadow: none;
+        border-radius: 2px;
+    }
+	table.table .form-control.error {
+		border-color: #f50000;
+	}
+	table.table td .add {
+		display: none;
+	}
+</style>
+</head>
+
+
+
+<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+      <div class="header-body">
+
+
+</div>
+</div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+<!-- Table -->
+<div class="row">
+<div class="col">
+  <div class="card shadow">
+    <div class="card-header border-0">
+      <h3 class="mb-0">List des Paiement               <div class="col-sm-4">
+          <br>
+        <button type="button" class="badge rounded-pill bg-primary" routerLink="/ajoutpaiement" ><i class="fa fa-plus"></i> ajout paiement</button>
+
+    </div></h3>
+    </div>
+    <div class="table-responsive">
+
+      <table class="table align-items-center table-flush">
+
+        <thead class="thead-light">
+          <tr>
+
+            <th scope="col">Eleve</th>
+
+            <th scope="col">date_paiement</th>
+            <th scope="col">Montant</th>
+            <th scope="col">Mois</th>
+
+            <th scope="col">action</th>
+
+            <th scope="col">etatDePaiement</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+
+
+
+
+                            <tr *ngFor="let item of paiement, user">
+                              <td>{{item.EleveName}}</td>
+                            <td>{{item.date_paiement}}</td>
+                            <td>{{item.montant}}</td>
+                            <td>{{item.mois}}</td>
+                           <td>{{item.etatDePayment}}</td>
+
+                            <td>
+                              <a  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                <a
+                               class="delete" (click)="delete(item.id)" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+
+
+
+                    </tr>
+
+                </tbody>
+
+
+
+
+
+
